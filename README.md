@@ -13,6 +13,6 @@ gradle mlDeploy
 gradle importSampleData
 REST API:
 http://localhost:8035/v1/search?structuredQuery=<cts%3aelement-value-query+xmlns%3acts%3d%22http%3a//marklogic.com/cts%22>%0a++<cts%3aelement>CoverageCd</cts%3aelement>%0a++<cts%3atext+xml%3alang%3d%22en%22>PD</cts%3atext>%0a</cts%3aelement-value-query>
- 
+
 Java Search API
 main.examples.StructuredSearch
