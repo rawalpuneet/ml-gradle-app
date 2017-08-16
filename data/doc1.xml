@@ -1,0 +1,8 @@
+<doc>
+  <type>carriage</type>
+  <inputMessage>
+    name:  value1
+    text:  value2
+    col1:  value3
+  </inputMessage>
+</doc>
