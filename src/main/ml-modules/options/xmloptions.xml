@@ -1,0 +1,17 @@
+<options xmlns="http://marklogic.com/appservices/search">
+  <search-option>unfiltered</search-option>
+  <!--
+  <additional-query>
+    <collection-query xmlns="http://marklogic.com/cts">
+      <uri>sample-import</uri>
+    </collection-query>
+  </additional-query>
+
+  <transform-results
+          apply="transform"
+          ns="http://marklogic.com/rest-api/transform/snippet"
+          at="/ext/sample-project/lib/snippet.xqy">
+  </transform-results>
+  -->
+  <return-query>true</return-query>
+</options>

@@ -1,0 +1,39 @@
+{
+  "article": {
+    "articleId": "AR11232",
+    "articleURI": "/ar/1232.json",
+    "documentState": "CREATED",
+    "headline": "This is a sample headline",
+    "column": [
+      "col1",
+      "col2",
+      "col3"
+    ],
+    "createdDate": "2018-01-01",
+    "updatedDate": "2018-01-17",
+    "provider": "ETD",
+    "version": "1.0",
+    "articleDescType": "short",
+    "articleDesc": "This is the sample description",
+    "issue": [
+      "Modified"
+    ],
+    "industry": [
+      "Telecom",
+      "Finance"
+    ],
+    "region": [
+      "North"
+    ],
+    "country": [
+      "United States"
+    ],
+    "currency": [
+      "USD"
+    ],
+    "instrument": [
+      "ETL"
+    ],
+    "content": "here are some of the content"
+  }
+}

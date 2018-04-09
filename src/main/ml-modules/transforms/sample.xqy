@@ -1,5 +1,5 @@
 xquery version "1.0-ml";
-
+(: Transforms for REST-APIs :)
 module namespace transform = "http://marklogic.com/rest-api/transform/sample";
 
 declare function transform(

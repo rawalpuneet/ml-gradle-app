@@ -39,7 +39,7 @@ package main.examples;
  * with structured criteria referencing a constraint defined by options.
  */
 public class StructuredSearch {
-  static final private String OPTIONS_NAME = "all";
+  static final private String OPTIONS_NAME = "xmloptions";
 
 
 
@@ -72,13 +72,17 @@ public class StructuredSearch {
 
     String rawXMLQuery =
         "<cts:element-value-query xmlns:cts=\"http://marklogic.com/cts\">"+
-            "<cts:element>CoverageCd</cts:element>"+
-            "<cts:text xml:lang=\"en\">PD</cts:text>"+
+            "<cts:element>documentState</cts:element>"+
+            "<cts:text xml:lang=\"en\">CREATED</cts:text>"+
             "</cts:element-value-query>";
 
+
     StringHandle rh = new StringHandle(rawXMLQuery);
+
     RawStructuredQueryDefinition qd =
         queryMgr.newRawStructuredQueryDefinition(rh);
+    qd.setOptionsName(OPTIONS_NAME);
+
 
     // create a handle for the search results
     SearchHandle resultsHandle = new SearchHandle();
@@ -92,13 +96,14 @@ public class StructuredSearch {
     // iterate over the result documents
     MatchDocumentSummary[] docSummaries = resultsHandle.getMatchResults();
     System.out.println("Listing "+docSummaries.length+" documents:\n");
-    for (MatchDocumentSummary docSummary: docSummaries) {
+      for (MatchDocumentSummary docSummary: docSummaries) {
       String uri = docSummary.getUri();
       int score = docSummary.getScore();
 
       // iterate over the match locations within a result document
       MatchLocation[] locations = docSummary.getMatchLocations();
       System.out.println("Matched "+locations.length+" locations in "+uri+" with "+score+" score:");
+          System.out.println("####" + docSummary.getFirstSnippetText());
       for (MatchLocation location: locations) {
 
         // iterate over the snippets at a match location

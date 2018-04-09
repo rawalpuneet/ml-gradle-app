@@ -1,3 +1,8 @@
+Steps required for setup:
+1. gradle mlDeploy
+2. gradle importJsonData
+3. gradle -PmainClass=main.examples.StructuredSearch execute
+
 This is the basic configuration and setup of MarkLogic and Gradle.
 Project uses ml-gradle for most of the integration.
 here are the list of tasks you can do with it:
